@@ -1,1 +1,90 @@
 @import "./variables.less";
+
+// reset body/html
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: @double-space 0;
+  background-color: @primary-color;
+  margin-bottom: @double-space * 2;
+}
+
+header {
+  margin-top: 0;
+  color: @text-light;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav a {
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+
+main {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.info-cards {
+  // flex center
+  display: inline-block;
+  justify-content: center;
+}
+
+main > .info-cards > p{
+  margin: 0 @space;
+  // card styling
+  padding: @space;
+  border: @border;
+}
+
+// lower card
+main > p {
+  max-width: 600px;
+  margin: @double-space auto 0;
+  // flex column layout
+  display: flex;
+  flex-direction: column;
+  //flex center
+  align-items: center;
+  // card styling
+  padding: @space;
+  border: @border;
+  box-shadow: 6px 6px 8px @light-gray;
+}
+
+// lower card title
+main > p > .title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: @double-space;
+}
+
+// lower card body
+main > p > .body {
+  margin-bottom: @double-space;
+}
+
+footer {
+  padding: @space;
+  margin-top: auto;
+  background-color: @light-gray;
+}
+
+footer {
+  text-align: center;
+}
