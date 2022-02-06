@@ -1,90 +1,81 @@
 @import "./variables.less";
 
-// reset body/html
-body, html {
-  padding: 0;
+html, body {
   margin: 0;
+  padding: 0;
+}
+  
+h1,
+h2 {
+  font-family: @font;
+  padding: 10px 0;
+  color: @black-text;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+p {
+  font-size: @p-size;
+  font-weight: @font-w;
+  color: @black-text;
+}
+
+.navbar {
+  background-color: @yellow;
+  padding: 40px 100px;
+}
+
+.red {
+  color: @red;
+  text-transform: uppercase;
+  font-weight: @font-weight;
+  font-family: @font;
 }
 
 header {
-  padding: @double-space 0;
-  background-color: @primary-color;
-  margin-bottom: @double-space * 2;
+  color: @black-text;
+  font-family: @font;
+  font-size: @font-size;
+  font-weight: @font-weight;
 }
 
-header {
-  margin-top: 0;
-  color: @text-light;
+.container-fluid {
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+  url("img/banner-bg.png") center;
+  height: 50%;
+    .logo {
+      text-align: center;
+      padding: 100px 0;
+    }
 }
-
-header nav ul li {
-    display: inline;
-}
-
-header nav a {
-    font-size: 18px;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-
 
 main {
-  width: 1024px;
-  margin: 0 auto;
+  .row {
+    padding: 40px 100px;
+  }
+  .col-sm-4 {
+    text-align: center;
+    padding: 40px 0;
+  }
+  #rowww {
+    background-color: @white;
+  }
 }
 
-.info-cards {
-  // flex center
+.button {
+  border: none;
+  padding: 16px 32px;
   display: inline-block;
-  justify-content: center;
-}
-
-main > .info-cards > p{
-  margin: 0 @space;
-  // card styling
-  padding: @space;
-  border: @border;
-}
-
-// lower card
-main > p {
-  max-width: 600px;
-  margin: @double-space auto 0;
-  // flex column layout
-  display: flex;
-  flex-direction: column;
-  //flex center
-  align-items: center;
-  // card styling
-  padding: @space;
-  border: @border;
-  box-shadow: 6px 6px 8px @light-gray;
-}
-
-// lower card title
-main > p > .title {
-  font-weight: 900;
-  font-size: 1.5rem;
-  margin-bottom: @double-space;
-}
-
-// lower card body
-main > p > .body {
-  margin-bottom: @double-space;
+  text-transform: uppercase;
+  font-family: @font;
+  font-weight: @font-weight;
+  border-radius: @font-size;
+  background-color: @yellow; 
+  margin: 4px 2px;
+  color: @black-text; 
 }
 
 footer {
-  padding: @space;
-  margin-top: auto;
-  background-color: @light-gray;
-}
-
-footer {
+  padding: 15px;
   text-align: center;
+  background-color: @black;
+  border-top: 10px solid @yellow;
 }
